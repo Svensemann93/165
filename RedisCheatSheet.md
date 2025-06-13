@@ -87,7 +87,7 @@ DEL age
 EXISTS name
 ```
 
-## Keys nach Value suchen
+## Keys nach Value suchen (retourniert alle Keys)
 
 ```bash
 KEYS *
@@ -121,13 +121,13 @@ setex name 10  sven
 lpush friends john
 ```
 
-- so wird der Value john in eine neue Liste gespeichert.
+- so wird der Value john in eine neue Liste gespeichert (am Anfang) mit rpush am Ende.
 
 ```bash
 lrange friends 0 -1
 ```
 
-- wir holen die Values in der Liste Friends startend beim Index 0 und enden beim Index 1. In dem Fall holen wir alle Werte.
+- wir holen die Values in der Liste Friends startend beim Index 0 und enden beim Index -1. In dem Fall holen wir alle Werte.
 
 ```bash
 lpop friends
